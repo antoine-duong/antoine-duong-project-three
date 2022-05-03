@@ -3,6 +3,8 @@
 import Header from './Components/Header';
 // Additional style sheets
 import './App.css';
+import Form from './Components/Form';
+import RankList from './Components/RankList';
 
 function App() {
 
@@ -11,6 +13,8 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Form />
+      <RankList />
     </div>
   );
 }
