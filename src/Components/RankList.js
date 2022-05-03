@@ -1,6 +1,10 @@
 const RankList = ()=>{
     return (
-        console.log("Rankings")
+        <div className="rankListContainer">
+            <ul className="rankList">
+                
+            </ul>
+        </div>
     )
 }
 
