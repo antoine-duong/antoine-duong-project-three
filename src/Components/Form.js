@@ -66,7 +66,7 @@ const Form = (props)=>{
                         <input 
                         onChange={inputDateHandler} 
                         type="text" 
-                        className="input"
+                        className="input has-text-centered"
                         id="dateValue"
                         placeholder="YYYYMMDD"
                         />
@@ -75,7 +75,12 @@ const Form = (props)=>{
 
                 <div className="field">
                     <div className="control">
-                        <button onClick={submitHandler} className="button is-link is-size-5 is-size-6-mobile" type="submit">Take me back!</button>
+                        <button onClick={submitHandler} className="button is-link is-size-5 is-size-6-mobile" type="submit">
+                            <span className="icon has-text-primary mr-2">
+                                <i className="fas fa-clock-rotate-left is-size-5 is-size-7-mobile"></i>
+                            </span>
+                            Take me back!
+                        </button>
                     </div>
                 </div>
             </form>
