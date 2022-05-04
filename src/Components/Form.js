@@ -1,30 +1,28 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
 const Form = (props)=>{
     // Write a function to accept the user's date input value
     const inputDateHandler = (e)=>{
-        // console.log(e.target.value);
         props.setInputDate(e.target.value)
     }
     // Write another function to accept the user's choice of url
-    // const urlChoiceHandler = (e)=>{
-
-    // }
-
+    const [urlChoice, setUrlChoice] = useState('placeholder');
+    const urlChoiceHandler = (e)=>{
+        setUrlChoice(e.target.value);
+    }
+    // Write a function to fire the fetch call via Axios when all choices are selected
     const submitHandler = (e)=>{
         e.preventDefault();
-        // console.log("Hello");
         axios({
             baseURL: "http://archive.org/wayback/available",
             method: "GET",
             params: {
-                url: "https://coinmarketcap.com/",
+                url: urlChoice,
                 timestamp: props.inputDate,
             }
         }).then((res)=>{
             props.setSnapshot(res.data.archived_snapshots.closest);
-            // console.log(res.data.archived_snapshots.closest);
         })
     } 
 
@@ -36,10 +34,15 @@ const Form = (props)=>{
                     <label htmlFor="urlChoice" className='label is-size-5 is-size-6-mobile'>Website</label>
                     <div className="control">
                         <div className="urlSelect select">
-                            <select id="urlChoice" name="urlFilter">
+                            <select
+                            value={urlChoice}
+                            onChange={urlChoiceHandler}
+                            id="urlChoice" 
+                            name="urlChoice"
+                            >
                                 <option value="placeholder" disabled>Pick one:</option>
-                                <option value="coinMarketCap">Coin Market Cap</option>
-                                <option value="coinGeck">Coin Gecko</option>
+                                <option value="https://coinmarketcap.com/">Coin Market Cap</option>
+                                <option value="https://www.coingecko.com/">Coin Gecko</option>
                             </select>
                         </div>
                     </div>

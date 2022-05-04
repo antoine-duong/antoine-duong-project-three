@@ -11,8 +11,6 @@ function App() {
 
   const [inputDate, setInputDate] = useState('');
   const [snapshot, setSnapshot] = useState({});
-  
-
 
   return (
     <div className="App">
