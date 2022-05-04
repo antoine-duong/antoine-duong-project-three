@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import axios from 'axios';
 
 const Form = (props)=>{
@@ -8,9 +8,9 @@ const Form = (props)=>{
         props.setInputDate(e.target.value)
     }
     // Write another function to accept the user's choice of url
-    const urlChoiceHandler = (e)=>{
+    // const urlChoiceHandler = (e)=>{
 
-    }
+    // }
 
     const submitHandler = (e)=>{
         e.preventDefault();
