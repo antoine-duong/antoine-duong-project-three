@@ -15,7 +15,7 @@ const Form = (props)=>{
     const submitHandler = (e)=>{
         e.preventDefault();
         axios({
-            baseURL: "http://archive.org/wayback/available",
+            baseURL: "https://archive.org/wayback/available",
             method: "GET",
             params: {
                 url: urlChoice,
