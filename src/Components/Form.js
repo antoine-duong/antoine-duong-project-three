@@ -22,7 +22,11 @@ const Form = (props)=>{
                 timestamp: props.inputDate,
             }
         }).then((res)=>{
-            props.setSnapshot(res.data.archived_snapshots.closest);
+            // props.setSnapshot(res.data.archived_snapshots.closest);
+            // console.log(res.data.archived_snapshots.closest);
+            let url = res.data.archived_snapshots.closest.url;
+            let urlCorrect = url.replace(/http:/, "https:");
+            props.setSnapshot(urlCorrect);
         })
     } 
 
