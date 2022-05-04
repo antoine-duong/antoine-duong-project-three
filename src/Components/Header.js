@@ -1,7 +1,7 @@
 const Header = ()=>{
     return (
         <header className='hero has-background-primary'>
-            <div className="hero-head has-text-left has-text-centered-mobile">
+            <div className="hero-head">
                 <h1 className='is-size-1 is-size-4-mobile has-text-weight-bold has-text-white m-4'>MCTM</h1>
                 <div className="dropdown is-hoverable">
                     <div className="dropdown-trigger">
@@ -46,7 +46,7 @@ const Header = ()=>{
                 </div>
             </div>
         </header>
-    )
+    );
 }
 
 export default Header;

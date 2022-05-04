@@ -1,11 +1,9 @@
-const RankList = ()=>{
+const RankList = (props)=>{
     return (
         <div className="rankListContainer">
-            <ul className="rankList">
-                
-            </ul>
+            <iframe src={props.snapshot.url} title={props.inputDate}>Your browser doesn't support iframe.</iframe>
         </div>
-    )
+    );
 }
 
 export default RankList;
