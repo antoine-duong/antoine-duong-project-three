@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+// import axios from 'axios';
+import { useState } from 'react';
+import Header from './Components/Header';
+// Additional style sheets
 import './App.css';
+import Form from './Components/Form';
+import RankList from './Components/RankList';
+import Footer from './Components/Footer';
 
 function App() {
+
+  const [inputDate, setInputDate] = useState('');
+  const [snapshot, setSnapshot] = useState('');
+  const [title, setTitle] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Form 
+      inputDate={ inputDate } 
+      setInputDate={ setInputDate } 
+      setSnapshot={ setSnapshot }
+      setTitle={ setTitle }
+      />
+      <RankList 
+      snapshot={ snapshot }  
+      title={ title }
+      />
+      <Footer />
     </div>
   );
 }
