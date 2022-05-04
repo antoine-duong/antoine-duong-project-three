@@ -1,11 +1,9 @@
 const RankList = (props)=>{
-    // let url = props.snapshot.url.toString;
-    // let urlCorrect = url.replace('http:', "https:")
     return (
-        <div className="rankListContainer">
+        <div>
             <iframe 
-            src = {props.snapshot} 
-            title={props.inputDate} 
+            src = {props.snapshot}
+            title={props.title} 
             sandbox=""
             >
                 Your browser doesn't support iframe.

@@ -10,7 +10,8 @@ import Footer from './Components/Footer';
 function App() {
 
   const [inputDate, setInputDate] = useState('');
-  const [snapshot, setSnapshot] = useState({});
+  const [snapshot, setSnapshot] = useState('');
+  const [title, setTitle] = useState('');
 
   return (
     <div className="App">
@@ -18,11 +19,12 @@ function App() {
       <Form 
       inputDate={ inputDate } 
       setInputDate={ setInputDate } 
-      setSnapshot= { setSnapshot }
+      setSnapshot={ setSnapshot }
+      setTitle={ setTitle }
       />
       <RankList 
       snapshot={ snapshot }  
-      inputDate={ inputDate }
+      title={ title }
       />
       <Footer />
     </div>

@@ -22,11 +22,10 @@ const Form = (props)=>{
                 timestamp: props.inputDate,
             }
         }).then((res)=>{
-            // props.setSnapshot(res.data.archived_snapshots.closest);
-            // console.log(res.data.archived_snapshots.closest);
-            let url = res.data.archived_snapshots.closest.url;
-            let urlCorrect = url.replace(/http:/, "https:");
-            props.setSnapshot(urlCorrect);
+            let urlUnsecured = res.data.archived_snapshots.closest.url;
+            let urlSecured = urlUnsecured.replace(/http:/, "https:");
+            props.setSnapshot(urlSecured);
+            props.setTitle(res.data.timestamp)
         })
     } 
 
@@ -35,7 +34,12 @@ const Form = (props)=>{
             <div className="column"></div>
             <form className='block mx-6 my-4 column'>
                 <div className="field">
-                    <label htmlFor="urlChoice" className='label is-size-5 is-size-6-mobile'>Website</label>
+                    <label htmlFor="urlChoice" className='label is-size-4 is-size-6-mobile'>
+                        <span className="icon has-text-primary mr-2">
+                            <i className="fas fa-window-maximize is-size-5 is-size-7-mobile"></i>
+                        </span>
+                        Website
+                    </label>
                     <div className="control">
                         <div className="urlSelect select">
                             <select
@@ -52,7 +56,12 @@ const Form = (props)=>{
                     </div>
                 </div>
                 <div className="field">
-                    <label htmlFor="dateValue" className='label is-size-5 is-size-6-mobile'>Desired date</label>
+                    <label htmlFor="dateValue" className='label is-size-5 is-size-6-mobile'>
+                        <span className="icon has-text-primary mr-2">
+                            <i className="fas fa-calendar-days is-size-5 is-size-7-mobile"></i>
+                        </span>
+                        Desired date
+                    </label>
                     <div className="control">
                         <input 
                         onChange={inputDateHandler} 
