@@ -41,7 +41,7 @@ const Header = ()=>{
                                     <span className="is-size-5 is-size-6-mobile">How to use:</span>
                                 </div>
                                 <p className="block is-size-6 is-size-7-mobile">
-                                    Simply choose a website from the dropdown menu and enter a date (<em>YYYYMMDD</em>).
+                                    Simply choose a website from the dropdown menu and enter a date.
                                 </p>
 
                                 <div className="icon-tex is-justify-content-center">
