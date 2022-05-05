@@ -34,7 +34,7 @@ const Form = (props)=>{
     return (
         <div className="columns">
             <div className="column"></div>
-            <form className='mx-6 my-4 column'>
+            <form className='column'>
                 <div className="field">
                     <label htmlFor="urlChoice" className='label is-size-4 is-size-6-mobile'>
                         <span className="icon has-text-primary mr-2">

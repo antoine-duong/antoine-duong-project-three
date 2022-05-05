@@ -6,6 +6,7 @@ import './App.css';
 import Form from './Components/Form';
 import RankList from './Components/RankList';
 import Footer from './Components/Footer';
+import Article from './Components/Article';
 
 function App() {
 
@@ -17,18 +18,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Article />
       <main>
-        <article className='columns'>
-          <div className='column'>
-            <p>That fear of missing out on things makes you miss out on everything.</p>
-            <p><a href="https://en.wikipedia.org/wiki/Etty_Hillesum">Etty Hillesum</a> </p>
-          </div>
-          <div className='column'>
-
-          </div>
-
-        </article>
-        <section className='section is-small'>
+        <section>
           <Form 
           inputDate={ inputDate } 
           setInputDate={ setInputDate } 
@@ -40,8 +32,8 @@ function App() {
         </section>
         <section>
           <RankList 
-          snapshot={ snapshot }  
-          title={ title }
+          snapshot={ snapshot }
+          title = { title }  
           />
         </section>
       </main>
