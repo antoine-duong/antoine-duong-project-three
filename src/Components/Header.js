@@ -1,11 +1,24 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock, faGear } from '@fortawesome/free-solid-svg-icons';
+
 const Header = ()=>{
     return (
         <header className='hero has-background-primary'>
             <div className="hero-head">
-                <h1 className='is-family-code is-size-1 is-size-4-mobile has-text-weight-bold has-text-white m-4'>MCTM</h1>
+                <h1 className='is-family-primary is-size-1 is-size-4-mobile has-text-weight-bold has-text-white m-4'>MCTM</h1>
                 <div className="dropdown is-hoverable">
                     <div className="dropdown-trigger">
-                        <h2 className='is-family-code is-size-3 is-size-6-mobile has-text-weight-semibold has-text-white ml-4 mb-4' aria-controls="dropdown-menu1">Market Cap Time Machine</h2>
+                        <h2 className='is-family-code is-size-3 is-size-6-mobile has-text-weight-semibold has-text-white ml-4 mb-4 level' aria-controls="dropdown-menu1">
+                            <span className="icon has-text-white">
+                                <FontAwesomeIcon icon={faClock} spin/>
+                            </span>
+                            <span className="px-3">
+                                Market Cap Time Machine
+                            </span>
+                            <span className="icon has-text-white">
+                                <FontAwesomeIcon icon={faGear} spin/>
+                            </span>
+                        </h2>
                     </div>
                     <div className="dropdown-menu" id="dropdown-menu1" role="menu">
                         <div className="dropdown-content">
@@ -33,7 +46,7 @@ const Header = ()=>{
 
                                 <div className="icon-tex is-justify-content-center">
                                     <span className="icon has-text-success">
-                                        <i className="fas fa-arrow-trend-up is-size-5 is-size-7-mobile"></i>
+                                        <i className="fas fa-money-bill-trend-up is-size-5 is-size-7-mobile"></i>
                                     </span>
                                     <span className="is-size-5 is-size-6-mobile">Market Cap</span>
                                 </div>

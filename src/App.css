@@ -39,6 +39,6 @@
 
 iframe {
   width: calc(100vw - 30px);
-  height: 500px;
-  border: solid 2px #485fc7;
+  height: 80vh;
 }
+

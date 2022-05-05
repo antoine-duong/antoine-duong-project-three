@@ -1,14 +1,20 @@
+import RankItem from "./RankItem";
+import Error from './Error';
+
 const RankList = (props)=>{
     return (
-        <div>
-            <iframe 
-            src = {props.snapshot}
-            title={props.title} 
-            sandbox=""
-            >
-                Your browser doesn't support iframe.
-            </iframe>
-        </div>
+        <ul>
+            {
+                props.snapshot === "https://web.archive.org/web/20210324133309/http://placeholder/"
+                ?
+                <Error />
+                :
+                <RankItem 
+                snapshot={ props.snapshot }
+                title={ props.title }
+                />
+            }
+        </ul>
     );
 }
 
