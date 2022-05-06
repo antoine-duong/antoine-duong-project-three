@@ -27,7 +27,10 @@ const Form = (props)=>{
             let urlUnsecured = res.data.archived_snapshots.closest.url;
             let urlSecured = urlUnsecured.replace(/http:/, "https:");
             props.setSnapshot(urlSecured);
-            props.setTitle(res.data.timestamp)
+            // Getting the date or the closest available date of the requested snapshot
+            let dateReturn = res.data.archived_snapshots.closest.timestamp;
+            let dateShorten = dateReturn.toString().substring(0, 8);
+            props.setTitle(dateShorten);
         })
     } 
 
