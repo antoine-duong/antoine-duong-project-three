@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.2f283238.css",
-    "main.js": "/static/js/main.9021fc5d.js",
-    "static/js/787.9036f075.chunk.js": "/static/js/787.9036f075.chunk.js",
-    "index.html": "/index.html",
-    "main.2f283238.css.map": "/static/css/main.2f283238.css.map",
-    "main.9021fc5d.js.map": "/static/js/main.9021fc5d.js.map",
-    "787.9036f075.chunk.js.map": "/static/js/787.9036f075.chunk.js.map"
+    "main.css": "/antoine-duong-project-three/static/css/main.2f283238.css",
+    "main.js": "/antoine-duong-project-three/static/js/main.de0b994d.js",
+    "static/js/787.9036f075.chunk.js": "/antoine-duong-project-three/static/js/787.9036f075.chunk.js",
+    "index.html": "/antoine-duong-project-three/index.html",
+    "main.2f283238.css.map": "/antoine-duong-project-three/static/css/main.2f283238.css.map",
+    "main.de0b994d.js.map": "/antoine-duong-project-three/static/js/main.de0b994d.js.map",
+    "787.9036f075.chunk.js.map": "/antoine-duong-project-three/static/js/787.9036f075.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2f283238.css",
-    "static/js/main.9021fc5d.js"
+    "static/js/main.de0b994d.js"
   ]
 }
