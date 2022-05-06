@@ -52,7 +52,7 @@ const Form = (props)=>{
                             >
                                 <option value="placeholder" disabled>Pick one:</option>
                                 <option value="https://coinmarketcap.com/">Coin Market Cap</option>
-                                <option value="https://www.coingecko.com/">Coin Gecko</option>
+                                <option value="https://www.coingecko.com/en">Coin Gecko</option>
                             </select>
                         </div>
                     </div>
